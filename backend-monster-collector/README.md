@@ -15,6 +15,12 @@ Aquí se encuentran los schemas generados en NestJS para validación al conectar
 
 ---
 
+## 📬 Pruebas de API (Postman)
+
+En la carpeta `postman/` se encuentran las pruebas de las solicitudes HTTP
+
+---
+
 ## 🚀 Ejecución del Proyecto
 
 ### Librerías utilizadas
