@@ -1,0 +1,24 @@
+{
+  "$jsonSchema": {
+    "bsonType": "object",
+    "required": [
+      "username",
+      "level",
+      "coins"
+    ],
+    "properties": {
+      "username": {
+        "bsonType": "string"
+      },
+      "level": {
+        "bsonType": "int",
+        "minimum": 1,
+        "maximum": 100
+      },
+      "coins": {
+        "bsonType": "int",
+        "minimum": 0
+      }
+    }
+  }
+}

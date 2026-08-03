@@ -1,0 +1,19 @@
+{
+  "$jsonSchema": {
+    "bsonType": "object",
+    "required": ["name", "level", "owner"],
+    "properties": {
+      "name": {
+        "bsonType": "string"
+      },
+      "level": {
+        "bsonType": "int",
+        "minimum": 1,
+        "maximum": 100
+      },
+      "owner": {
+        "bsonType": "objectId"
+      }
+    }
+  }
+}
