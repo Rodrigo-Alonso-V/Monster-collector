@@ -6,10 +6,12 @@ Interfaz de usuario y cliente del juego desarrollado en **Godot Engine 4**.
 
 ## 🖼️ Capturas de Pantalla
 
-Las capturas de la interfaz en ejecución se encuentran en la carpeta `Assets/Screenshots/` (o la ruta donde guardes las imágenes):
+Las capturas de la interfaz en ejecución se encuentran en la carpeta `Assets/Screenshots/`:
 
-* **Pantalla Principal:** `Assets/Screenshots/main_menu.png`
-* **Juego / Interfaz:** `Assets/Screenshots/gameplay.png`
+* **Login:** `Assets/Screenshots/Login.png`
+* **Juego / Interfaz:** `Assets/Screenshots/Gameplay.png`
+* **Inventario:** `Assets/Screenshots/Inventory.png`
+* **Estadisticas de mountro:** `Assets/Screenshots/Statistics.png`
 
 ---
 
