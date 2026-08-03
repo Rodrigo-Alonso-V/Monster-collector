@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://dtyq3857318ql"]
+
+[ext_resource type="Script" uid="uid://8yce7dy5g8y5" path="res://Scripts/skeleton.gd" id="1_81u3t"]
+[ext_resource type="Texture2D" uid="uid://iijoeu3ayo5p" path="res://Assets/Sprites/Enemies/Enemy 06-1.png" id="1_sfdtf"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sfdtf"]
+atlas = ExtResource("1_sfdtf")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_81u3t"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sfdtf")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_sfdtf"]
+radius = 21.023796
+
+[node name="Skeleton" type="Area2D" unique_id=1116935901 groups=["Monster"]]
+script = ExtResource("1_81u3t")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=417783155]
+sprite_frames = SubResource("SpriteFrames_81u3t")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=377168822]
+position = Vector2(0, 3)
+shape = SubResource("CircleShape2D_sfdtf")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]

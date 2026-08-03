@@ -1,0 +1,335 @@
+[gd_scene format=3 uid="uid://c0fj5dbn3iiqr"]
+
+[ext_resource type="Script" uid="uid://ba8mbe3pf610s" path="res://Scripts/player_inventory.gd" id="1_nwplk"]
+[ext_resource type="Texture2D" uid="uid://khxvmnokq5lf" path="res://Assets/Sprites/Enemies/Enemy 03-1.png" id="2_8khf3"]
+[ext_resource type="Script" uid="uid://pc641c0qxsu7" path="res://Scripts/panel_statistics.gd" id="2_g7xe2"]
+[ext_resource type="Texture2D" uid="uid://baldbl1vdb3oh" path="res://Assets/Sprites/Enemies/Enemy 15-2.png" id="3_7do7j"]
+[ext_resource type="Texture2D" uid="uid://coy1plrbq3mk2" path="res://Assets/Sprites/Enemies/Enemy 05-1.png" id="4_uigwu"]
+[ext_resource type="Texture2D" uid="uid://cc025bivo61bl" path="res://Assets/Sprites/Enemies/Enemy 22.png" id="5_uigwu"]
+[ext_resource type="Texture2D" uid="uid://iijoeu3ayo5p" path="res://Assets/Sprites/Enemies/Enemy 06-1.png" id="7_n1adg"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b6y43"]
+bg_color = Color(5.7756904e-07, 0.38522777, 0.45351923, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nwplk"]
+bg_color = Color(0.6556838, 0.050093457, 0.15006271, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n1adg"]
+atlas = ExtResource("3_7do7j")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gkv0s"]
+atlas = ExtResource("3_7do7j")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aiw8p"]
+atlas = ExtResource("3_7do7j")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_agkp4"]
+atlas = ExtResource("4_uigwu")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gsdb2"]
+atlas = ExtResource("4_uigwu")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_osmrk"]
+atlas = ExtResource("4_uigwu")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7c223"]
+atlas = ExtResource("5_uigwu")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x1rvm"]
+atlas = ExtResource("5_uigwu")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pc3ue"]
+atlas = ExtResource("5_uigwu")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g7xe2"]
+atlas = ExtResource("2_8khf3")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g3vtq"]
+atlas = ExtResource("2_8khf3")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7do7j"]
+atlas = ExtResource("2_8khf3")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_um6yk"]
+atlas = ExtResource("7_n1adg")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_06fmr"]
+atlas = ExtResource("7_n1adg")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h7nxx"]
+atlas = ExtResource("7_n1adg")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g3vtq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n1adg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gkv0s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aiw8p")
+}],
+"loop": true,
+"name": &"BlueGhost",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_agkp4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gsdb2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_osmrk")
+}],
+"loop": true,
+"name": &"DarkSkeleton",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7c223")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x1rvm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pc3ue")
+}],
+"loop": true,
+"name": &"OgreKing",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g7xe2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g3vtq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7do7j")
+}],
+"loop": true,
+"name": &"Pumpkin",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_um6yk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_06fmr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h7nxx")
+}],
+"loop": true,
+"name": &"Skeleton",
+"speed": 5.0
+}]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8khf3"]
+bg_color = Color(0.15686275, 0.76862746, 0.27450982, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+expand_margin_left = 10.0
+expand_margin_top = 5.0
+expand_margin_right = 10.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g7xe2"]
+bg_color = Color(0.6785925, 0, 0.1718866, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+expand_margin_left = 10.0
+expand_margin_right = 10.0
+
+[node name="Player_Inventory" type="Control" unique_id=2023315129]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_nwplk")
+
+[node name="Panel" type="Panel" parent="." unique_id=787888335]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 163.0
+offset_top = 74.0
+offset_right = -121.0
+offset_bottom = -106.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_b6y43")
+
+[node name="ItemList" type="ItemList" parent="Panel" unique_id=32308634]
+layout_mode = 0
+offset_left = 31.0
+offset_top = 43.0
+offset_right = 589.0
+offset_bottom = 420.0
+theme_override_font_sizes/font_size = 20
+max_columns = 4
+same_column_width = true
+icon_mode = 0
+icon_scale = 2.0
+
+[node name="LabelInventoryClear" type="Label" parent="Panel" unique_id=1043312594]
+layout_mode = 0
+offset_left = 182.0
+offset_top = 206.0
+offset_right = 378.0
+offset_bottom = 241.0
+theme_override_font_sizes/font_size = 25
+text = "Inventario Vacio"
+
+[node name="Button" type="Button" parent="Panel" unique_id=1137106930]
+layout_mode = 0
+offset_left = 829.0
+offset_right = 867.0
+offset_bottom = 40.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_nwplk")
+text = "X"
+
+[node name="PanelStatistics" type="Panel" parent="Panel" unique_id=1115533642]
+layout_mode = 0
+offset_left = 624.0
+offset_top = 64.0
+offset_right = 832.0
+offset_bottom = 419.0
+script = ExtResource("2_g7xe2")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Panel/PanelStatistics" unique_id=886167296]
+position = Vector2(104, 101)
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_g3vtq")
+animation = &"Skeleton"
+
+[node name="LabelName" type="Label" parent="Panel/PanelStatistics" unique_id=725769825]
+layout_mode = 0
+offset_left = 74.0
+offset_top = 179.0
+offset_right = 157.0
+offset_bottom = 202.0
+text = "Pumpkin"
+
+[node name="LabelLevel" type="Label" parent="Panel/PanelStatistics" unique_id=1088469238]
+layout_mode = 0
+offset_left = 74.0
+offset_top = 215.0
+offset_right = 157.0
+offset_bottom = 238.0
+text = "Level: 1"
+
+[node name="ButtonUpdate" type="Button" parent="Panel/PanelStatistics" unique_id=200804886]
+layout_mode = 0
+offset_left = 68.0
+offset_top = 251.0
+offset_right = 143.0
+offset_bottom = 284.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_8khf3")
+text = "Level up"
+
+[node name="ButtonDelete" type="Button" parent="Panel/PanelStatistics" unique_id=985193651]
+layout_mode = 0
+offset_left = 75.0
+offset_top = 296.0
+offset_right = 136.0
+offset_bottom = 329.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_g7xe2")
+text = "Delete"
+
+[node name="HTTPRequestStatisticsMonster" type="HTTPRequest" parent="Panel/PanelStatistics" unique_id=1163508378]
+
+[node name="HTTPRequestNewLevel" type="HTTPRequest" parent="Panel/PanelStatistics" unique_id=1720247710]
+
+[node name="HTTPRequestDelete" type="HTTPRequest" parent="Panel/PanelStatistics" unique_id=1715005094]
+
+[node name="OptionButton" type="OptionButton" parent="Panel" unique_id=859516189]
+layout_mode = 0
+offset_left = 36.0
+offset_top = 8.0
+offset_right = 104.0
+offset_bottom = 39.0
+selected = 0
+item_count = 2
+popup/item_0/text = "All"
+popup/item_0/id = 0
+popup/item_1/text = "Level"
+popup/item_1/id = 1
+
+[node name="LineEdit" type="LineEdit" parent="Panel" unique_id=514406298]
+layout_mode = 0
+offset_left = 139.0
+offset_top = 7.0
+offset_right = 270.0
+offset_bottom = 38.0
+
+[node name="LabelSelectMonster" type="Label" parent="." unique_id=2044841980]
+layout_mode = 0
+offset_left = 777.0
+offset_top = 285.0
+offset_right = 1007.0
+offset_bottom = 360.0
+text = "Selecciona un mounstro
+ para ver sus 
+estadisticas"
+horizontal_alignment = 1
+
+[node name="HTTPRequestMyMonsters" type="HTTPRequest" parent="." unique_id=362882660]
+
+[node name="HTTPRequestGetMonsters" type="HTTPRequest" parent="." unique_id=423136759]
+
+[node name="HTTPRequestMonsterByName" type="HTTPRequest" parent="." unique_id=762610849]
+
+[node name="HTTPRequestByNameLevel" type="HTTPRequest" parent="." unique_id=20738789]
+
+[connection signal="item_clicked" from="Panel/ItemList" to="Panel/PanelStatistics" method="_on_item_list_item_clicked"]
+[connection signal="pressed" from="Panel/Button" to="." method="_on_button_pressed"]
+[connection signal="reload_monsters" from="Panel/PanelStatistics" to="." method="_on_panel_statistics_reload_monsters"]
+[connection signal="pressed" from="Panel/PanelStatistics/ButtonUpdate" to="Panel/PanelStatistics" method="_on_button_update_pressed"]
+[connection signal="pressed" from="Panel/PanelStatistics/ButtonDelete" to="Panel/PanelStatistics" method="_on_button_delete_pressed"]
+[connection signal="request_completed" from="Panel/PanelStatistics/HTTPRequestStatisticsMonster" to="Panel/PanelStatistics" method="_on_http_request_statistics_monster_request_completed"]
+[connection signal="request_completed" from="Panel/PanelStatistics/HTTPRequestNewLevel" to="Panel/PanelStatistics" method="_on_http_request_new_level_request_completed"]
+[connection signal="request_completed" from="Panel/PanelStatistics/HTTPRequestDelete" to="Panel/PanelStatistics" method="_on_http_request_delete_request_completed"]
+[connection signal="text_changed" from="Panel/LineEdit" to="." method="_on_line_edit_text_changed"]
+[connection signal="request_completed" from="HTTPRequestMyMonsters" to="." method="_on_http_request_my_monsters_request_completed"]
+[connection signal="request_completed" from="HTTPRequestGetMonsters" to="." method="_on_http_request_get_monsters_request_completed"]
+[connection signal="request_completed" from="HTTPRequestMonsterByName" to="." method="_on_http_request_monster_by_name_request_completed"]

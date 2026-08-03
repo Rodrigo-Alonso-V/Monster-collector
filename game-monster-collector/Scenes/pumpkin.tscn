@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://cgh0vx07u76e4"]
+
+[ext_resource type="Texture2D" uid="uid://khxvmnokq5lf" path="res://Assets/Sprites/Enemies/Enemy 03-1.png" id="1_4thn5"]
+[ext_resource type="Script" uid="uid://bpfsspkdfpxco" path="res://Scripts/pumpkin.gd" id="1_mjg1r"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mjg1r"]
+atlas = ExtResource("1_4thn5")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_syw7a"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mjg1r")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_twh7v"]
+radius = 21.023796
+
+[node name="Pumpkin" type="Area2D" unique_id=1130465201 groups=["Monster"]]
+script = ExtResource("1_mjg1r")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=398473424]
+position = Vector2(0, 3)
+sprite_frames = SubResource("SpriteFrames_syw7a")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=232495588]
+position = Vector2(0, 3)
+shape = SubResource("CircleShape2D_twh7v")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]

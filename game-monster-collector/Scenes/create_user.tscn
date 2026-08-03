@@ -1,0 +1,92 @@
+[gd_scene format=3 uid="uid://dyjib2qw4s8x3"]
+
+[ext_resource type="Script" uid="uid://otn534inq0vj" path="res://Scripts/create_user.gd" id="1_0a8jo"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0a8jo"]
+bg_color = Color(0.38459992, 0.44534898, 0.5155735, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e1fam"]
+bg_color = Color(0.56382185, 0.89731073, 0.9409701, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_re2uo"]
+bg_color = Color(0.6766987, 0.18050826, 0.22940305, 1)
+
+[node name="CreateUser" type="Control" unique_id=1037783831]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0a8jo")
+
+[node name="Panel" type="Panel" parent="." unique_id=2007780457]
+layout_mode = 0
+offset_right = 1186.0
+offset_bottom = 693.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_0a8jo")
+
+[node name="ColorRect" type="Panel" parent="." unique_id=2050159198]
+layout_mode = 0
+offset_left = 440.0
+offset_top = 164.0
+offset_right = 714.0
+offset_bottom = 434.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_e1fam")
+
+[node name="LineEdit" type="LineEdit" parent="ColorRect" unique_id=1441462568]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 60.0
+offset_right = 236.0
+offset_bottom = 100.0
+placeholder_text = "Username"
+alignment = 1
+
+[node name="ButtonCreate" type="Button" parent="ColorRect" unique_id=1613092858]
+layout_mode = 0
+offset_left = 105.0
+offset_top = 136.0
+offset_right = 165.0
+offset_bottom = 167.0
+text = "Create"
+
+[node name="LabelNoUsuario" type="Label" parent="ColorRect" unique_id=574147037]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.39800003
+anchor_bottom = 0.16700001
+offset_left = 54.0
+offset_top = 193.0
+offset_right = 105.94799
+offset_bottom = 192.91
+theme_override_colors/font_color = Color(0.49145484, 0.1388087, 0.2054095, 1)
+text = "Usuario existente"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="ColorRect" unique_id=1775420630]
+layout_mode = 0
+offset_left = 104.0
+offset_top = 1.0
+offset_right = 270.0
+offset_bottom = 32.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_re2uo")
+text = "<-- Regresar a login"
+
+[node name="HTTPRequestValidate" type="HTTPRequest" parent="." unique_id=1237121089]
+
+[node name="HTTPRequestCreate" type="HTTPRequest" parent="." unique_id=1239764192]
+
+[connection signal="pressed" from="ColorRect/ButtonCreate" to="." method="_on_button_create_pressed"]
+[connection signal="pressed" from="ColorRect/Button" to="." method="_on_button_pressed"]
+[connection signal="request_completed" from="HTTPRequestValidate" to="." method="_on_http_request_validate_request_completed"]
+[connection signal="request_completed" from="HTTPRequestCreate" to="." method="_on_http_request_create_request_completed"]
